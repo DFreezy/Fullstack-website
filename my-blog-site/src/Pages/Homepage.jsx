@@ -3,9 +3,9 @@ import React from 'react'
 export default function Homepage() {
     return (
         <>
-        <div className="bg-[url('https://www.shutterstock.com/image-photo/hands-typing-on-laptop-programming-600nw-2480023489.jpg')] bg-cover bg-center h-screen pb-0">
-        <h1 className="text-center text-7xl tracking-widest text-white">AT DFREEZY WE DO </h1>
-        <h1 className="text-center font-bold text-7xl tracking-widest text-white">TWO THINGS:</h1>
+        <div className="bg-[url('https://www.shutterstock.com/image-photo/hands-typing-on-laptop-programming-600nw-2480023489.jpg')] bg-cover bg-center h-screen pb-0 font-serif">
+        <h1 className="text-center text-6xl tracking-widest text-white">AT DFREEZY WE DO </h1>
+        <h1 className="text-center font-bold text-6xl tracking-widest text-white">TWO THINGS:</h1>
         <br />
                 
                               {/* Circular Image Container with Hover Effect */}
@@ -19,6 +19,8 @@ export default function Homepage() {
                         <h1 className="text-center text-base font-semibold">Mobile App Development</h1>
                         <h1>Click to start</h1>
                     </div>
+
+                    <h1 class="text-white font-bold text-xl">Choose ⬅️➡️ wisely</h1>
 
                     <div className="w-48 h-48 rounded-full bg-white hover:bg-red-500 flex flex-col items-center justify-center transition-colors duration-300 p-8">
                         <img 
