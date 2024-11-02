@@ -12,7 +12,7 @@ export default function Navbar() {
                 
                 {/* Navigation Links Section */}
                 <ul className="list-none flex flex-row space-x-8">
-                    <li className="my-4 hover:text-red-500 cursor-pointer">Start here</li>
+                  <Link to="./Pages/Start.jsx"><li className="my-4 hover:text-red-500 cursor-pointer">Start here</li></Link> 
                     <li className="my-4 hover:text-red-500 cursor-pointer">Blog</li>
                     <li className="my-4 hover:text-red-500 cursor-pointer">Recommended</li>
                     <li className="my-4 hover:text-red-500 cursor-pointer">Contact</li>

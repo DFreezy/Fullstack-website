@@ -76,6 +76,12 @@ export default function Homepage() {
                 </div>
             </div>
 
+            <div>
+                <footer class="bg-black">
+                 <h1>Stuff</h1>
+                </footer>
+            </div>
+
             <CustomModal 
                 isOpen={modalIsOpen}
                 onClose={closeModal}
