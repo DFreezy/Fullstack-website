@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Homepage from './Pages/Homepage';
+import Footer from './components/Footer';
 import Start from './Pages/Start';
 import CustomModal from './components/modal'; // Your custom modal component
 import ReactModal from 'react-modal';
@@ -37,6 +38,7 @@ export default function App() {
           onClose={closeModal} 
           content={modalContent} 
         />
+        <Footer />
       </BrowserRouter>
     </>
   );
