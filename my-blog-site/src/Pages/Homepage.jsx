@@ -10,7 +10,7 @@ export default function Homepage() {
                 
                               {/* Circular Image Container with Hover Effect */}
                               <div className="flex items-center justify-center space-x-16 mt-6">
-                    <div className="w-48 h-48 rounded-full bg-white hover:bg-red-500 flex flex-col items-center justify-center transition-colors duration-300 p-8">
+                    <div className="w-48 h-48 rounded-full bg-white hover:bg-red-500 flex flex-col items-center justify-center transition-colors duration-300 p-8 cursor-pointer">
                         <img 
                             src="https://cdn1.vectorstock.com/i/1000x1000/18/05/icon-phone-mobile-symbol-with-shadow-vector-25181805.jpg" 
                             alt="Phone Icon" 
@@ -22,7 +22,7 @@ export default function Homepage() {
 
                     <h1 class="text-white font-bold text-xl">Choose ⬅️➡️ wisely</h1>
 
-                    <div className="w-48 h-48 rounded-full bg-white hover:bg-red-500 flex flex-col items-center justify-center transition-colors duration-300 p-8">
+                    <div className="w-48 h-48 rounded-full bg-white hover:bg-red-500 flex flex-col items-center justify-center transition-colors duration-300 p-8 cursor-pointer">
                         <img 
                             src="https://static.vecteezy.com/system/resources/previews/007/126/469/non_2x/internet-website-click-icon-vector.jpg" 
                             alt="Internet Icon" 
@@ -33,14 +33,14 @@ export default function Homepage() {
                     </div>
                 </div>
             </div>
-            <div className="bg-white">
+            <div className="bg-white mt-6">
                 <h1 className="text-center text-7xl tracking-widest text-black mb-8">Blog latest</h1>
                 <div className="flex flex-row justify-evenly">
-                    <div className='bg-slate-300 py-4 px-6'>
+                    <div className='bg-slate-300 py-4 px-6 cursor-pointer'>
                         <img src="https://res-1.cloudinary.com/hotwhbffo/image/upload/q_auto/v1/ghost-blog-images/tailwindcss-vs-bootstrap.png" width="200" height="200"/>
                         <h1>Difference between Bootstrap and tailwind</h1>
                     </div>
-                    <div className='bg-slate-300 py-4 px-6'>
+                    <div className='bg-slate-300 py-4 px-6 cursor-pointer'>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS1SJGLGHocpkt5zGbOtlik85sMMNtG6qhOw&s" width="200" height="200"/>
                         <h1>Should you get a website or an app?</h1>
                     </div>
