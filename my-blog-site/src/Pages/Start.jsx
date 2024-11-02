@@ -10,6 +10,8 @@ export default function Start(){
             <p>How am I going to afford a website..?</p>
             <p>Will it be good enough..?</p>
             <p>Is it worth the investment..?</p>
+            <br/>
+            <p>If you have then you're in the right place</p>
             </div>
         </div>
         </>
