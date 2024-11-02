@@ -29,16 +29,16 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage openModal={openModal} />} />
-          <Route path="./Pages/Start.jsx" element={<Start />}/>
+          <Route path="/Start" element={<Start />}/>
         </Routes>
 
+        <Footer />
         {/* Modal Component */}
         <CustomModal 
           isOpen={modalIsOpen} 
           onClose={closeModal} 
           content={modalContent} 
         />
-        <Footer />
       </BrowserRouter>
     </>
   );

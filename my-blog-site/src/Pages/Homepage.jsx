@@ -44,7 +44,7 @@ export default function Homepage() {
                 </div>
             </div>
             
-            <div className="bg-white mt-6">
+            <div className="bg-white mt-6 border-slate-950">
                 <h1 className="text-center text-7xl tracking-widest text-black mb-8">Blog latest</h1>
                 <div className="flex flex-wrap justify-evenly">
                     <div className='bg-slate-300 py-4 px-6 cursor-pointer flex flex-col items-center max-w-sm' 
@@ -55,7 +55,7 @@ export default function Homepage() {
                         <button className="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-200">See more</button>
                     </div>
 
-                    <div className='bg-slate-300 py-4 px-6 cursor-pointer flex flex-col items-center max-w-sm' 
+                    <div className='bg-slate-300 py-4 px-6 cursor-pointer flex flex-col items-center max-w-sm border-slate-950' 
                         onClick={() => openModalHandler("Should you get a website or an app?", "Deciding between getting a website or an app can be a decision that might impact your budget, but also the potential growth your business could see. Let's not forget about the SEO ranking as well.")}>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS1SJGLGHocpkt5zGbOtlik85sMMNtG6qhOw&s" width="200" height="200" alt="Website or App"/>
                         <h1 className="text-lg font-semibold">Should you get a website or an app?</h1>
