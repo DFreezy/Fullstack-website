@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Homepage from './Pages/Homepage';
+import Contact from './Pages/contact';
 import Footer from './components/Footer';
 import Start from './Pages/Start';
 import CustomModal from './components/modal'; // Your custom modal component
@@ -24,7 +25,7 @@ export default function App() {
   };
 
   const getUser = () => {
-    fetch("http://localhost:3001/users")
+    fetch('http://localhost:3001/users')
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);
@@ -32,7 +33,7 @@ export default function App() {
         return res.json();
       })
       .then((json) => setUserData(json)) // Save data to state
-      .catch((error) => console.error("Error fetching user data:", error));
+      .catch((error) => console.error('Error fetching user data:', error));
   };
 
   useEffect(() => {
@@ -46,6 +47,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Homepage openModal={openModal} />} />
           <Route path="/Start" element={<Start />} />
+          <Route path="/Contact" element={<Contact />} />
         </Routes>
 
         <Footer />
@@ -60,9 +62,8 @@ export default function App() {
         <div>
           {userData && userData.length > 0 ? (
             userData.map((data) => (
-              <div key={data.id} style={{border:"1px solid gray", width:"500px"}}>
+              <div key={data.id} style={{border: '1px solid gray', width: '500px'}}>
                 <h1>Name: {data.name}</h1>
-                <h1>Username: {data.userName}</h1>
                 <h1>Email: {data.email}</h1>
               </div>
             ))
@@ -74,5 +75,3 @@ export default function App() {
     </>
   );
 }
-
-
