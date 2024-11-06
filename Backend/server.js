@@ -13,9 +13,9 @@ const users = []; // Temporary in-memory storage for users
 
 // POST endpoint to handle adding a user
 app.post("/users", (req, res) => {
-  const { name, email } = req.body;  // Extract name and email from the body
-  if (name && email) {
-    const newUser = { id: users.length + 1, name, email };
+  const { name, email, comment} = req.body;  // Extract name and email from the body
+  if (name && email && comment) {
+    const newUser = { id: users.length + 1, name, email, comment};
     users.push(newUser);  // Add new user to the users array
     res.status(201).json(newUser); // Send back the created user data
   } else {
@@ -31,4 +31,17 @@ app.get("/users", (req, res) => {
 const port = process.env.PORT || 3001;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
+});
+
+// DELETE: Delete a user by ID
+app.delete("/users/:id", (req, res) => {
+  const userId = parseInt(req.params.id, 10);
+  const index = users.findIndex((user) => user.id === userId);
+
+  if (index !== -1) {
+      const deletedUser = users.splice(index, 1); // Remove user from array
+      res.json(deletedUser[0]); // Return deleted user
+  } else {
+      res.status(404).json({ error: "User not found" });
+  }
 });

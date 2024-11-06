@@ -4,6 +4,7 @@ import axios from 'axios';
 export default function Contact() {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
+  const [comment, setComment] = useState('');
 
   // Handle form submission
   const handleSubmit = async (e) => {
@@ -13,6 +14,7 @@ export default function Contact() {
       const response = await axios.post('http://localhost:3001/users', {
         email,
         name,
+        comment,
       });
 
       console.log('User added:', response.data);
@@ -39,6 +41,13 @@ export default function Contact() {
         value={name}
         onChange={(e) => setName(e.target.value)}
         required
+      />
+      <input
+      type="text"
+      placeholder="My thoughts are"
+      value={comment}
+      onChange={(e) => setComment(e.target.value)}
+      required
       />
       <button type="submit">Submit</button>
     </form>
