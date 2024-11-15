@@ -18,10 +18,10 @@ export default function Navbar() {
                         <Link to="/Start">Start here</Link>
                     </li>
                     <li className="my-4 hover:text-red-500 cursor-pointer">
-                        <Link to="/Blog">Blog</Link>
+                        <Link to="/Projects">Projects</Link>
                     </li>
                     <li className="my-4 hover:text-red-500 cursor-pointer">
-                        <Link to="/Recommended">Recommended</Link>
+                        <Link to="/Reviews">Reviews</Link>
                     </li>
                     <li className="my-4 hover:text-red-500 cursor-pointer">
                         <Link to="/Contact">Contact</Link>

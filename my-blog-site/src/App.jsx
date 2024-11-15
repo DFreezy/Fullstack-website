@@ -5,6 +5,8 @@ import Homepage from './Pages/Homepage';
 import Contact from './Pages/contact';
 import Footer from './components/Footer';
 import Start from './Pages/Start';
+import Reviews from './Pages/Reviews';
+import Projects from './Pages/projects';
 import CustomModal from './components/modal';
 import ReactModal from 'react-modal';
 import axios from 'axios';
@@ -63,6 +65,8 @@ export default function App() {
           <Route path="/" element={<Homepage openModal={openModal} />} />
           <Route path="/Start" element={<Start />} />
           <Route path="/Contact" element={<Contact />} />
+          <Route path="/Reviews" element={<Reviews />} />
+          <Route path="/Projects" element={<Projects />} />
         </Routes>
 
         <Footer />
@@ -72,22 +76,6 @@ export default function App() {
           onClose={closeModal} 
           content={modalContent} 
         />
-        
-        {/* Display User Data with Delete Option */}
-        <div>
-          {userData && userData.length > 0 ? (
-            userData.map((data) => (
-              <div key={data.id} style={{border:"1px solid gray", width:"500px", margin: "10px"}}>
-                <h1>Name: {data.name}</h1>
-                <h1>Email: {data.email}</h1>
-                <p>Comment: {data.comment}</p>
-                <button onClick={() => handleDelete(data.id)}>Delete</button>
-              </div>
-            ))
-          ) : (
-            <p>Loading user data...</p>
-          )}
-        </div>
       </BrowserRouter>
     </>
   );

@@ -25,6 +25,14 @@ export default function Start(){
            </p>
             </div>
         </div>
+        <div>
+            <h1>About Duwayne</h1>
+            <br/>
+            <h1>
+                DFreezy created by Duwayne. Really the name comes form highschool friends
+                Anyway. From a young age I had a unique 
+            </h1>
+        </div>
         </>
     )
 }
