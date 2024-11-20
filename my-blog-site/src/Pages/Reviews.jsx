@@ -8,7 +8,7 @@ export default function Reviews() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/users');
+        const response = await axios.get('http://localhost:5000/users');
         setUserData(response.data);
       } catch (error) {
         console.error('Error fetching user data:', error);
@@ -21,7 +21,7 @@ export default function Reviews() {
   // Delete handler (if needed)
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3001/users/${id}`);
+      await axios.delete(`http://localhost:5000/users/${id}`);
       setUserData((prevData) => prevData.filter((user) => user.id !== id));
       alert('User deleted successfully');
     } catch (error) {
@@ -39,7 +39,7 @@ export default function Reviews() {
     e.preventDefault();
     try {
       // Send POST request to the backend
-      const response = await axios.post('http://localhost:3001/users', {
+      const response = await axios.post('http://localhost:5000/users', {
         email,
         name,
         comment,
@@ -57,7 +57,7 @@ export default function Reviews() {
   };
 
   return (
-    <>
+    <div className='bg-green-100 italic'>
     <form onSubmit={handleSubmit}>
       <input
         type="email"
@@ -98,6 +98,6 @@ export default function Reviews() {
         <p>Loading user data...</p>
       )}
     </div>
-    </>
+    </div>
   );
 }

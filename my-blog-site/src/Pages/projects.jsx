@@ -89,67 +89,9 @@ export default function Projects() {
     };
 
     return (
-        <div className="text-center min-h-screen flex flex-col bg-blue-50">
+        <div className="text-center min-h-screen flex flex-col bg-blue-50 bg-green-100 italic">
             <div className="p-6 max-w-screen-xl mx-auto flex-grow">
-                <h2 className="text-3xl font-bold text-blue-700 text-center mb-6">Add a New Project</h2>
-
                 {/* Form Section */}
-                <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md">
-                    <div className="grid grid-cols-1 gap-4 mb-6">
-                        <div className="mb-4">
-                            <label className="block text-gray-700 font-semibold">Name:</label>
-                            <input 
-                                type="text" 
-                                value={name} 
-                                onChange={(e) => setName(e.target.value)} 
-                                required 
-                                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-                            />
-                        </div>
-
-                        <div className="mb-4">
-                            <label className="block text-gray-700 font-semibold">Email:</label>
-                            <input 
-                                type="email" 
-                                value={email} 
-                                onChange={(e) => setEmail(e.target.value)} 
-                                required 
-                                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-                            />
-                        </div>
-
-                        <div className="mb-4">
-                            <label className="block text-gray-700 font-semibold">Comment:</label>
-                            <textarea 
-                                value={comment} 
-                                onChange={(e) => setComment(e.target.value)} 
-                                required 
-                                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-                            />
-                        </div>
-
-                        <div className="mb-4">
-                            <label className="block text-gray-700 font-semibold">Project Image:</label>
-                            <input 
-                                type="file" 
-                                accept="image/*"
-                                onChange={handleImageChange}
-                                className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500"
-                            />
-                            {imagePreview && (
-                                <div className="mt-4">
-                                    <img src={imagePreview} alt="Image Preview" className="w-full h-48 object-cover rounded" />
-                                </div>
-                            )}
-                        </div>
-
-                        <button 
-                            type="submit" 
-                            className="w-full p-3 bg-blue-500 text-white rounded-md font-semibold hover:bg-blue-600 focus:ring-2 focus:ring-blue-500">
-                            Add Project
-                        </button>
-                    </div>
-                </form>
 
                 {/* List of Projects displayed as widgets */}
                 <h3 className="text-xl font-semibold text-blue-700 mt-8 mb-4">All Projects</h3>
