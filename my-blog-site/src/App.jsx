@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Navbar from './components/navbar';
+import Navbar from './components/Navbar';
 import Homepage from './Pages/Homepage';
-import Contact from './Pages/contact';
+import Contact from './Pages/Contact';
 import Footer from './components/Footer';
 import Start from './Pages/Start';
 import Reviews from './Pages/Reviews';
@@ -16,7 +16,7 @@ ReactModal.setAppElement('#root');
 export default function App() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalContent, setModalContent] = useState('');
-  const [userData, setUserData] = useState([]); // State to store user data
+  const [userData, setUserData] = useState([]);
 
   const openModal = (content) => {
     setModalContent(content);
@@ -29,7 +29,7 @@ export default function App() {
 
   // Fetch users from backend
   const getUser = () => {
-    fetch("http://localhost:3001/users")
+    fetch("http://localhost:5000/users")
       .then((res) => {
         if (!res.ok) {
           throw new Error(`HTTP error! Status: ${res.status}`);
@@ -43,8 +43,7 @@ export default function App() {
   // Delete a user by ID
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3001/users/${id}`);
-      // Update the state to reflect deletion
+      await axios.delete(`http://localhost:5000/users/${id}`);
       setUserData(userData.filter((user) => user.id !== id));
       alert('User deleted successfully!');
     } catch (error) {
@@ -70,7 +69,6 @@ export default function App() {
         </Routes>
 
         <Footer />
-        {/* Modal Component */}
         <CustomModal 
           isOpen={modalIsOpen} 
           onClose={closeModal} 
