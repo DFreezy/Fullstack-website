@@ -18,7 +18,7 @@ export default function Projects() {
 
     const fetchUsers = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/users');
+            const response = await axios.get("https://fullstack-website-backend.onrender.com/users");
             setUsers(response.data);
         } catch (error) {
             console.error("Error fetching users:", error);
@@ -27,7 +27,7 @@ export default function Projects() {
 
     const fetchProjects = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/projects');
+            const response = await axios.get("https://fullstack-website-backend.onrender.com/projects");
             setProjects(response.data);
         } catch (error) {
             console.error("Error fetching projects:", error);
@@ -51,7 +51,7 @@ export default function Projects() {
                 formData.append('image', image); // Attach the image file to FormData
             }
 
-            const response = await axios.post('http://localhost:5000/projects', formData, {
+            const response = await axios.post("https://fullstack-website-backend.onrender.com/projects", formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data', // Ensure the backend handles the image
                 },
@@ -80,7 +80,9 @@ export default function Projects() {
 
     const handleDelete = async (id) => {
         try {
-            const response = await axios.delete(`http://localhost:5000/projects/${id}`);
+            const response = await axios.delete(`https://fullstack-website-backend.onrender.com
+
+/projects/${id}`);
             setProjects(projects.filter(project => project.id !== id)); // Remove the deleted project from the list
         } catch (error) {
             console.error('Error deleting project:', error);

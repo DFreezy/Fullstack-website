@@ -8,7 +8,7 @@ export default function Reviews() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/users');
+        const response = await axios.get('https://fullstack-website-backend.onrender.com/users');
         setUserData(response.data);
       } catch (error) {
         console.error('Error fetching user data:', error);
@@ -21,7 +21,9 @@ export default function Reviews() {
   // Delete handler (if needed)
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/users/${id}`);
+      await axios.delete(`https://fullstack-website-backend.onrender.com
+
+/users/${id}`);
       setUserData((prevData) => prevData.filter((user) => user.id !== id));
       alert('User deleted successfully');
     } catch (error) {
@@ -39,7 +41,7 @@ export default function Reviews() {
     e.preventDefault();
     try {
       // Send POST request to the backend
-      const response = await axios.post('http://localhost:5000/users', {
+      const response = await axios.post('https://fullstack-website-backend.onrender.com/users', {
         email,
         name,
         comment,
