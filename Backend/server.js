@@ -53,7 +53,7 @@ const sendEmailNotification = (type, data) => {
 
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: 'duwaynefrieslaar23@gmail.com',
+    to: 'Du-wayne.Frieslaar@capaciti.org.za',
     subject,
     text
   };
